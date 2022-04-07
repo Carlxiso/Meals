@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 
 import '../models/category.dart';
 
-const DUMMY_CATEGORIES = const [
+const DUMMY_CATEGORIES = [
   Category(
     id: 'c1',
-    title: 'Italiano',
+    title: 'Italian',
     color: Colors.purple,
   ),
   Category(
     id: 'c2',
-    title: 'Rápido & Fácil',
+    title: 'Quick & Easy',
     color: Colors.red,
   ),
   Category(
@@ -20,37 +20,37 @@ const DUMMY_CATEGORIES = const [
   ),
   Category(
     id: 'c4',
-    title: 'Alemã',
+    title: 'German',
     color: Colors.amber,
   ),
   Category(
     id: 'c5',
-    title: 'Leve & Saudável',
+    title: 'Light & Healthy',
     color: Colors.cyan,
   ),
   Category(
     id: 'c6',
-    title: 'Exótica',
+    title: 'Exotic',
     color: Colors.green,
   ),
   Category(
     id: 'c7',
-    title: 'Café da Manhã',
+    title: 'Breakfast',
     color: Colors.lightBlue,
   ),
   Category(
     id: 'c8',
-    title: 'Asiática',
+    title: 'Asian',
     color: Colors.lightGreen,
   ),
   Category(
     id: 'c9',
-    title: 'Francesa',
+    title: 'Frech',
     color: Colors.pink,
   ),
   Category(
     id: 'c10',
-    title: 'Verão',
+    title: 'Summer',
     color: Colors.teal,
   ),
 ];
