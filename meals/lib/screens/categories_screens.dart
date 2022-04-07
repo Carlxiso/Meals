@@ -1,19 +1,31 @@
 import 'package:flutter/material.dart';
 
+import '../components/category_item.dart';
+import '../data/dummy_data.dart';
+
 class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return GridView(
-      gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-        // Cada tile vai ter nom maximo 200px de largura
-        maxCrossAxisExtent: 200,
-        childAspectRatio: 3 / 2,
-        crossAxisSpacing: 20,
-        mainAxisExtent: 20,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Let´s get something to eat!'),
       ),
-      children: <Widget>[],
+      body: GridView(
+        gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+          // Cada tile vai ter no maximo 200px de largura
+          maxCrossAxisExtent: 200,
+          childAspectRatio: 3 / 2,
+          crossAxisSpacing: 100,
+          mainAxisExtent: 100,
+        ),
+
+        ///map vai percorrer as categorias e clocá-las no componente categoria_item
+        children: DUMMY_CATEGORIES.map((mapRecebeUmaCategoria) {
+          return CategoryItem(mapRecebeUmaCategoria);
+        }).toList(),
+      ),
     );
   }
 }
