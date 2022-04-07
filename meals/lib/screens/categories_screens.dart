@@ -17,8 +17,8 @@ class CategoriesScreen extends StatelessWidget {
           // Cada tile vai ter no maximo 200px de largura
           maxCrossAxisExtent: 200,
           childAspectRatio: 3 / 2,
-          crossAxisSpacing: 100,
-          mainAxisExtent: 100,
+          crossAxisSpacing: 20.0,
+          mainAxisSpacing: 20.0,
         ),
 
         ///map vai percorrer as categorias e clocá-las no componente categoria_item
