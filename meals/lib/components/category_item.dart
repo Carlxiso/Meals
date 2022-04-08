@@ -14,13 +14,13 @@ class CategoryItem extends StatelessWidget {
   final Category category;
 
   /// Construtor
-  const CategoryItem(this.category);
+  CategoryItem(this.category);
 
   /// Método para selecionar categorias a aprtir do navigator
   void _selectCategory(BuildContext context) {
     Navigator.of(context).push(
       MaterialPageRoute(builder: (_) {
-        return const CategoriesMealsScreen();
+        return CategoriesMealsScreen(category);
       }),
     );
   }
