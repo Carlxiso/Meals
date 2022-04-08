@@ -6,15 +6,17 @@ class CategoriesMealsScreen extends StatelessWidget {
   // const CategoriesMealsScreen({Key? key}) : super(key: key);
 
   /// Atributo
-  final Category category;
+  // final Category category;
 
   ///Construtor
-  CategoriesMealsScreen(
-    this.category,
-  );
+  // CategoriesMealsScreen(
+  //   this.category,
+  // );
 
   @override
   Widget build(BuildContext context) {
+    ///Pegar o dado da categoria através da navegação da rota (Usando ModalRoute)
+    final category = ModalRoute.of(context)!.settings.arguments as Category;
     return Scaffold(
       appBar: AppBar(
         title: Text(category.title),

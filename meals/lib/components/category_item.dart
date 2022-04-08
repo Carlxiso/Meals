@@ -18,10 +18,16 @@ class CategoryItem extends StatelessWidget {
 
   /// Método para selecionar categorias a aprtir do navigator
   void _selectCategory(BuildContext context) {
-    Navigator.of(context).push(
-      MaterialPageRoute(builder: (_) {
-        return CategoriesMealsScreen(category);
-      }),
+    // Navigator.of(context).push(
+    //   MaterialPageRoute(builder: (_) {
+    //     return CategoriesMealsScreen(category);
+    //   }),
+    // );
+
+    /// Chamada de uma Rota Nomeada
+    Navigator.of(context).pushNamed(
+      '/categories-meals',
+      arguments: category,
     );
   }
 
