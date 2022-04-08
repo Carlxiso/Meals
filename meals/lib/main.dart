@@ -11,6 +11,13 @@ class MyApp extends StatelessWidget {
       title: 'DalyMeals',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        accentColor: Colors.amber,
+        fontFamily: 'Raleway',
+        textTheme: ThemeData.light().textTheme.copyWith(
+                titleLarge: const TextStyle(
+              fontSize: 20,
+              fontFamily: 'RobotoCondensed',
+            )),
       ),
       home: const CategoriesScreen(),
     );
