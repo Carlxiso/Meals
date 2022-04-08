@@ -13,6 +13,7 @@ class CategoriesScreen extends StatelessWidget {
         title: Text('Let´s get something to eat!'),
       ),
       body: GridView(
+        padding: const EdgeInsets.all(15),
         gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
           // Cada tile vai ter no maximo 200px de largura
           maxCrossAxisExtent: 200,
