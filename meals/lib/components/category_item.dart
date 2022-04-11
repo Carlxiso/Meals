@@ -1,9 +1,10 @@
 // import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:meals/utils/app_routes.dart';
 
 import '../models/category.dart';
-import '../screens/categories_meals_screen.dart';
+import '../utils/app_routes.dart';
 
 /// Component CategoryItem vai receber uma categoria como parametro
 ///
@@ -26,7 +27,7 @@ class CategoryItem extends StatelessWidget {
 
     /// Chamada de uma Rota Nomeada
     Navigator.of(context).pushNamed(
-      '/categories-meals',
+      AppRoutes.CATEGORIES_MEALS,
       arguments: category,
     );
   }
