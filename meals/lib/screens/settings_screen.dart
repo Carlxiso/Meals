@@ -7,6 +7,12 @@ import '../models/settings.dart';
 class SettingsScreen extends StatefulWidget {
   // const SettingsScreen({Key? key}) : super(key: key);
 
+  /// Sempre que existirem alterações nos settings esta função será chamada
+  final Function(Settings) onSettingsChanged;
+
+  /// Construtor
+  const SettingsScreen(this.onSettingsChanged);
+
   @override
   State<SettingsScreen> createState() => _SettingsScreenState();
 }
@@ -22,11 +28,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
     Function(bool) onChanged,
   ) {
     return SwitchListTile.adaptive(
-      title: Text(title),
-      subtitle: Text(subtitle),
-      value: value,
-      onChanged: onChanged,
-    );
+        title: Text(title),
+        subtitle: Text(subtitle),
+        value: value,
+        onChanged: (value) {
+          onChanged(value);
+          widget.onSettingsChanged(settings);
+        });
   }
 
   @override
