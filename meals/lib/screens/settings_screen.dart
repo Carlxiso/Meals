@@ -7,18 +7,25 @@ import '../models/settings.dart';
 class SettingsScreen extends StatefulWidget {
   // const SettingsScreen({Key? key}) : super(key: key);
 
+  final Settings settings;
+
   /// Sempre que existirem alterações nos settings esta função será chamada
   final Function(Settings) onSettingsChanged;
 
   /// Construtor
-  const SettingsScreen(this.onSettingsChanged);
+  const SettingsScreen(this.settings, this.onSettingsChanged);
 
   @override
   State<SettingsScreen> createState() => _SettingsScreenState();
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
-  var settings = Settings();
+  late Settings settings;
+  @override
+  void initState() {
+    super.initState();
+    settings = widget.settings;
+  }
 
   /// Função que vai retornar um switch
   Widget _createSwitch(
