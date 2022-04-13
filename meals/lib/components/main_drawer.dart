@@ -47,12 +47,19 @@ class MainDrawer extends StatelessWidget {
           _createItem(
             Icons.restaurant,
             'Meals',
-            () => Navigator.of(context).pushNamed(AppRoutes.HOME),
+
+            /// pushReplacementNamed faz a substituição de um screen
+            /// ou invés de empelhar telas como funciona o pushnamed
+            /// o pushReplacementNamed vai remover o screen anterior
+            /// e substituir pelo novo screen
+
+            () => Navigator.of(context).pushReplacementNamed(AppRoutes.HOME),
           ),
           _createItem(
             Icons.settings,
             'Settings',
-            () => Navigator.of(context).pushNamed(AppRoutes.SETTINGS),
+            () =>
+                Navigator.of(context).pushReplacementNamed(AppRoutes.SETTINGS),
           ),
         ],
       ),
